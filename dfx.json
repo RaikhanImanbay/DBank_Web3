@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "dbnak": {
+      "main": "src/dbnak/main.mo",
+      "type": "motoko"
+    },
+    "dbnak_assets": {
+      "dependencies": [
+        "dbnak"
+      ],
+      "frontend": {
+        "entrypoint": "src/dbnak_assets/src/index.html"
+      },
+      "source": [
+        "src/dbnak_assets/assets",
+        "dist/dbnak_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.10.0",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
